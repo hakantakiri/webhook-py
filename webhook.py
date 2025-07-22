@@ -10,7 +10,7 @@ RC_API_KEY = os.getenv('RC_API_KEY')
 
 class SimpleHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        if self.path == '/rc':
+        if self.path == '/wh':
             if not RC_URL or not RC_API_KEY:
                 self.send_response(500)
                 self.end_headers()
