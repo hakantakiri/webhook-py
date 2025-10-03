@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  webhook-py:
+    build: .
+    ports:
+      - "3010:3010"
+      - "5678:5678"  # Debug port
+    volumes:
+      - .:/app  # Mount current directory for hot reloading
+    environment:
+      # Institution URLs
+      - UPC_URL
+      - CIB_URL
+      - UPN_URL
+      # API Keys
+      - UPC_API_KEY
+      - CIB_API_KEY
+      - UPN_API_KEY
+      - PYTHONDONTWRITEBYTECODE=1  # Prevent .pyc files
+      - PYTHONUNBUFFERED=1  # Immediate log output
+    restart: unless-stopped
