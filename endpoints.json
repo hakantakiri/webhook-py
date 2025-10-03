@@ -1,0 +1,33 @@
+[
+    {
+        "name": "upc",
+        "target": {
+            "url": "${UPC_URL}",
+            "method": "POST",
+            "headers": {
+                "x-api-key": "${UPC_API_KEY}"
+            }
+        }
+        
+    },
+    {
+        "name": "cib",
+        "target": {
+            "url": "${CIB_URL}",
+            "method": "POST",
+            "headers": {
+                "x-api-key": "${CIB_API_KEY}"
+            }
+        }
+    },
+    {
+        "name": "upn",
+        "target": {
+            "url": "${UPN_URL}",
+            "method": "POST",
+            "headers": {
+                "x-api-key": "${UPN_API_KEY}"
+            }
+        }
+    }
+]
